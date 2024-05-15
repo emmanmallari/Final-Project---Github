@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vault - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="registration.html">Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <input type="text" id="search" placeholder="Search for titles...">
+        </section>
+
+        <!-- Shop Categories -->
+        <section class="shop-categories">
+            <h1>Shop</h1>
+            <div class="categories">
+                <button class="category-button" onclick="filterCategory('all')">All</button>
+                <div class="dropdown">
+                    <button class="category-button">By Genre</button>
+                    <div class="dropdown-content">
+                        <button onclick="filterCategory('Mystery')">Mystery</button>
+                        <button onclick="filterCategory('Drama')">Drama</button>
+                        <button onclick="filterCategory('Fantasy')">Fantasy</button>
+                        <button onclick="filterCategory('Thriller')">Thriller</button>
+                        <button onclick="filterCategory('Action')">Action</button>
+                        <button onclick="filterCategory('Comedy')">Comedy</button>
+                        <button onclick="filterCategory('Horror')">Horror</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="category-button">By Release Date</button>
+                    <div class="dropdown-content">
+                        <button onclick="sortProducts('release-date-asc')">Ascending</button>
+                        <button onclick="sortProducts('release-date-desc')">Descending</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-grid">
+            <div class="product" data-genre="Mystery" data-release-date="1950">
+                <img src="rashomon.jpg" alt="Rashomon">
+                <h3>Rashomon</h3>
+                <p>Directed by Akira Kurosawa</p>
+                <p>Genre: Mystery</p>
+                <p>Release Date: 1950</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Rashomon', 24.99)">Add to Cart - $24.99</button>
+            </div>
+
+            <!-- Repeat this block for each movie with appropriate data attributes -->
+            <div class="product" data-genre="Drama" data-release-date="2016">
+                <img src="moonlight.jpg" alt="Moonlight">
+                <h3>Moonlight</h3>
+                <p>Directed by Barry Jenkins</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 2016</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Moonlight', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Drama" data-release-date="1984">
+                <img src="paristexas.jpg" alt="Paris, Texas">
+                <h3>Paris, Texas</h3>
+                <p>Directed by Wim Wenders</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 1984</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Paris, Texas', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Drama" data-release-date="2012">
+                <img src="themaster.jpg" alt="The Master">
+                <h3>The Master</h3>
+                <p>Directed by Paul Thomas Anderson</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 2012</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('The Master', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Fantasy" data-release-date="2009">
+                <img src="coraline.jpg" alt="Coraline">
+                <h3>Coraline</h3>
+                <p>Directed by Henry Selick</p>
+                <p>Genre: Fantasy</p>
+                <p>Release Date: 2009</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Coraline', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Thriller" data-release-date="1959">
+                <img src="nxnw.jpg" alt="North by Northwest">
+                <h3>North by Northwest</h3>
+                <p>Directed by Alfred Hitchcock</p>
+                <p>Genre: Thriller</p>
+                <p>Release Date: 1959</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('North by Northwest', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Drama" data-release-date="2008">
+                <img src="synecdoche.jpg" alt="Synecdoche, New York">
+                <h3>Synecdoche, New York</h3>
+                <p>Directed by Charlie Kaufman</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 2008</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Synecdoche, New York', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Drama" data-release-date="1975">
+                <img src="dogdayafternoon.jpg" alt="Dog Day Afternoon">
+                <h3>Dog Day Afternoon</h3>
+                <p>Directed by Sidney Lumet</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 1975</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Dog Day Afternoon', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Action" data-release-date="1995">
+                <img src="ghostintheshell.jpg" alt="Ghost in the Shell">
+                <h3>Ghost in the Shell</h3>
+                <p>Directed by Mamoru Oshii</p>
+                <p>Genre: Action</p>
+                <p>Release Date: 1995</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Ghost in the Shell', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Comedy" data-release-date="2015">
+                <img src="thelobster.jpg" alt="The Lobster">
+                <h3>The Lobster</h3>
+                <p>Directed by Yorgos Lanthimos</p>
+                <p>Genre: Comedy</p>
+                <p>Release Date: 2015</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('The Lobster', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Drama" data-release-date="1950">
+                <img src="sunsetblvd.jpg" alt="Sunset Blvd.">
+                <h3>Sunset Blvd.</h3>
+                <p>Directed by Billy Wilder</p>
+                <p>Genre: Drama</p>
+                <p>Release Date: 1950</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('Sunset Blvd.', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			<div class="product" data-genre="Horror" data-release-date="1986">
+                <img src="thefly.jpg" alt="The Fly">
+                <h3>The Fly</h3>
+                <p>Directed by David Cronenberg</p>
+                <p>Genre: Horror</p>
+                <p>Release Date: 1986</p>
+                <p>Format: Blu-ray</p>
+                <button onclick="addToCart('The Fly', 24.99)">Add to Cart - $24.99</button>
+            </div>
+			
+            <!-- Add other products similarly -->
+            <!-- Additional products -->
+        </section>
+
+        <!-- Shopping Cart -->
+        <section class="shopping-cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <p id="cart-total">Total: $0.00</p>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

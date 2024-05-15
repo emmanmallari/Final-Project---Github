@@ -1,0 +1,111 @@
+/* registration.css */
+
+/* General Styles */
+body {
+    font-family: "Bahnschrift", Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px; /* Add padding to prevent overlap with fixed navbar */
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a,
+.cta-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+.cta-button:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-info {
+    margin-bottom: 20px;
+}
+
+.registration-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.registration-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.registration-info ul li {
+    margin-bottom: 5px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form label {
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #575757;
+}
