@@ -1,5 +1,3 @@
-/* scripts.js */
-
 let cart = [];
 
 function addToCart(productName, productPrice) {
